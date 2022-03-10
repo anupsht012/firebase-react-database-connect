@@ -51,8 +51,8 @@ function App() {
 
   return (
     <div classNameName="App">
-      {/* <Signin/> */}
-      <input placeholder='Name...'
+      <Signin/>
+      {/* <input placeholder='Name...'
         onChange={(e) => {
           setNewName(e.target.value);
         }} />
@@ -93,7 +93,7 @@ function App() {
 
           </div>
         )
-      })}
+      })} */}
 
 
     </div>
