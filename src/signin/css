@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:sans-serif ,Verdana, Tahoma;
+    background: rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+ 
+h2{
+    font-weight: bold;
+    margin: 0;
+    text-transform:uppercase ;
+}
+p{
+    font-size: 14px;
+    margin: 20px 0 30px;
+}
+
+span{
+    font-size: 12px;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.container{
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    box-shadow:  0 2px 2px 2px;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+/* .form-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+} */
+
+.form-container form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.social-icons{
+    margin: 20px 0;
+ }
+
+ .social-icons a{
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    
+ }
+
+
+ .form-container input{
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 80%;
+    outline: none;
+}
+
+button{
+    border-radius: 20px;
+    border: 1px solid red;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    outline: none;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+input:focus{
+    outline: none;
+}
+
+button.btn{
+    background: transparent;
+    border-color: white;
+}
+.form-container{
+    position: abs   olute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.sign-in-container{
+    left: 0;
+    width: 50%;     
+    z-index: 20;
+    opacity: 0;
+
+     }
+
+     
+ .sign-up-container{
+    left: 0;
+    width: 50%;     
+    z-index: 10;
+    opacity: 0;    
+    
+}
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition:transform 0.6s ease-in-out;
+    z-index: 100;
+   
+   }
+
+   .overlay{
+    position:relative;
+    background: #ff416c;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: transform 0.6s ease-in-out;
+    color: white;
+}
+
+.overlay-left, .overlay-right{
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    position: absolute;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right{
+    right: 0;
+    transform: translateX(0);
+   
+}
+
+.overlay-left{
+    transform: translateX(-20%);
+
+    position:absolute;
+}
+
+
+
+
+ 
+
+
+
+
+
+.overlay-panel{
+position: absolute;
+display: flex;
+top: 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 40px;
+height: 100%;
+width: 50%;
+text-align: center;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+
+
+}
+
+
+
+
+.container.right-panel-active .sign-in-container{
+    transform: translateX(100%);
+     
+}
+
+.container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+     
+}
+
+.container.right-panel-active .sign-up-container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+     
+}
+
+.container.right-panel-active .overlay{
+    transform: translateX(50%); 
+     
+}
+
+.container.right-panel-active .overlay-left{
+    transform: translateX(0%); 
+}
+
+.container.right-panel-active .overlay-right{
+    transform: translateX(20%); 
+}    
+
+
